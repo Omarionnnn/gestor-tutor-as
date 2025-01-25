@@ -1,0 +1,106 @@
+/* Contenedor general */
+.store-container {
+    background-color: var(--color-background);
+    padding: 20px;
+}
+
+/* Título */
+.store-title {
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 30px;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--color-secondary-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.sidebar h3 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.sidebar p {
+    font-size: 16px;
+    color: var(--color-text);
+}
+
+/* Tarjetas de productos */
+.product-card {
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card-text {
+    color: var(--color-text-secondary);
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.product-card .add-to-cart-button {
+    background: var(--color-accent-gradient);
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card .add-to-cart-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Carrito */
+.cart {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+}
+
+.cart h3 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.cart ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart ul li {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: var(--color-text);
+}
+
+.purchase-button {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.purchase-button:hover {
+    transform: scale(1.05);
+    background: #ff9500;
+}
+
+.remove-from-cart-button {
+    margin-left: 20px;
+}

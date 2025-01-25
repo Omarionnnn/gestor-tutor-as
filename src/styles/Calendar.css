@@ -1,0 +1,85 @@
+.calendar-container {
+    background-color: var(--color-background);
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    transition: min-height 0.3s ease;
+}
+
+.calendar-container.history-open {
+    min-height: calc(100vh - 50px);
+}
+
+.upcoming-appointments {
+    text-align: center;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.react-calendar {
+    background-color: var(--color-secondary-bg);
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.react-calendar__tile {
+    background-color: white;
+    color: var(--color-text);
+    border-radius: 4px;
+    padding: 5px;
+    transition: transform 0.2s ease;
+}
+
+.react-calendar__tile:hover {
+    transform: scale(1.1);
+    background-color: var(--color-secondary-bg);
+}
+
+.assigned-date {
+    background-color: var(--color-secondary);
+    color: white;
+    font-weight: bold;
+    border: 2px solid var(--color-primary);
+}
+
+.consultation-option p {
+    margin-top: 10px;
+    color: var(--color-text);
+}
+
+.history-button {
+    background: var(--color-accent-gradient);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.history-button:hover {
+    background-color: #eaa63f;
+}
+
+.history-list {
+    background-color: white;
+    border: 1px solid var(--color-secondary);
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}

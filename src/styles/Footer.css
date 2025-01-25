@@ -1,0 +1,42 @@
+/* Contenedor principal del footer */
+.footer-container {
+    height: 100px;
+    background-color: var(--color-primary); /* Azul vibrante */
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    border-top: 4px solid var(--color-secondary); /* Línea superior amarilla */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Contenido */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navegación */
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.footer-link {
+    color: var(--color-secondary); /* Amarillo */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ffaa00; /* Amarillo más intenso */
+}
+
+/* Créditos */
+.footer-credit {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #ccc;
+}

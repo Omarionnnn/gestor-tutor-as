@@ -1,0 +1,61 @@
+/* Estilo general del navbar */
+.navbar {
+    background-color: var(--color-primary); /* Azul profundo */
+    color: var(--color-secondary); /* Dorado */
+    height: 100px;
+    padding: 0 20px;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo principal a la izquierda */
+.navbar-brand h1 {
+    color: var(--color-secondary); /* Dorado */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 32px;
+    margin: 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover del navbar-brand */
+.navbar-brand h1:hover {
+    color: #e0b646; /* Dorado más claro */
+    transform: scale(1.1);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Añade un efecto de sombra */
+}
+
+/* Logo pequeño y texto "Tus unicoins" */
+.navbar-text {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    margin-left: 15px;
+}
+
+/* Enlaces del menú */
+.nav-link {
+    color: white !important;
+    font-size: 20px !important;
+    margin-left: 15px;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-secondary) !important; /* Dorado */
+    text-decoration: underline;
+}
+
+/* Enlace activo */
+.nav-link.active {
+    color: var(--color-secondary) !important; /* Usa el color del hover */
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Responsividad */
+.navbar-toggler {
+    border-color: var(--color-secondary);
+}
