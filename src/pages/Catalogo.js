@@ -36,7 +36,7 @@ function Catalogo() {
                 </div>
             </div>
 
-            {/* Llamado a la acción */}
+            {/* Llamado a comprar */}
             <div className="catalogo-cta">
                 <a href="/store" className="cta-button">Compra Ahora</a>
             </div>

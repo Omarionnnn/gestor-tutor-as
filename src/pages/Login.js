@@ -29,7 +29,7 @@ function Login() {
         if (error) {
             setError(error.message);
         } else {
-            navigate('/calendar'); // Redirige a Calendar
+            navigate('/calendar');
         }
         setLoading(false);
     };

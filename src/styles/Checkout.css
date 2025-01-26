@@ -1,6 +1,6 @@
 /* Contenedor general */
 .checkout-container {
-    background-color: var(--color-background); /* Gris claro */
+    background-color: var(--color-background);
     min-height: calc(100vh - 70px);
     display: flex;
     flex-direction: column;
@@ -11,7 +11,7 @@
 
 /* Título principal */
 .checkout-container h2 {
-    color: var(--color-primary); /* Azul vibrante */
+    color: var(--color-primary);
     font-size: 2rem;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 20px;
@@ -46,7 +46,7 @@
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-    color: var(--color-primary); /* Azul vibrante */
+    color: var(--color-primary);
 }
 
 .form-group input {
@@ -59,8 +59,8 @@
 
 /* Botón de confirmación */
 .checkout-button {
-    background: var(--color-secondary); /* Amarillo */
-    color: var(--color-primary); /* Azul vibrante */
+    background: var(--color-secondary);
+    color: var(--color-primary);
     padding: 10px 20px;
     border: none;
     border-radius: 8px;

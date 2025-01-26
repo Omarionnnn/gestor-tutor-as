@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
-import { Modal, Button } from 'react-bootstrap'; // Importar Modal
-import supabase from '../supabaseClient'; // Asegúrate de que la ruta sea correcta
+import { Modal, Button } from 'react-bootstrap';
+import supabase from '../supabaseClient';
 import 'react-calendar/dist/Calendar.css';
-import '../styles/Calendar.css'; // Estilos personalizados
+import '../styles/Calendar.css';
 
 function MyCalendar() {
     const [date, setDate] = useState(new Date());
     const [assignedDates, setAssignedDates] = useState([]);
     const [historyVisible, setHistoryVisible] = useState(false);
-    const [history, setHistory] = useState([]); // Historial de consultas
+    const [history, setHistory] = useState([]);
     const [unicoins, setUnicoins] = useState(0);
     const [showModal, setShowModal] = useState(false);
     const [selectedDate, setSelectedDate] = useState(null);
 
     // Opciones de consulta
     const consultations = [
-        { id: 1, title: 'Consulta Rápida', unicoins: 2 },
+        { id: 1, title: 'Consulta Rápida', unicoins: 5 },
         { id: 2, title: 'Paquete Básico', unicoins: 10 },
         { id: 3, title: 'Tutorías Grupales', unicoins: 20 },
     ];
@@ -90,7 +90,7 @@ function MyCalendar() {
             if (error) {
                 console.error('Error fetching history:', error);
             } else {
-                setHistory(data); // Guarda el historial completo
+                setHistory(data);
             }
         }
     };
@@ -98,7 +98,7 @@ function MyCalendar() {
     // Mostrar/Ocultar historial
     const toggleHistory = () => {
         if (!historyVisible) {
-            fetchHistory(); // Cargar historial si se va a mostrar
+            fetchHistory();
         }
         setHistoryVisible(!historyVisible);
     };
@@ -106,16 +106,16 @@ function MyCalendar() {
     // Manejar el cambio de fecha con validación
     const handleDateChange = async (newDate) => {
         const now = new Date();
-        const diffInHours = Math.abs(newDate - now) / 36e5; // Diferencia en horas
+        const diffInHours = Math.abs(newDate - now) / 36e5;
 
         if (diffInHours < 24) {
             alert('No puedes modificar tu cita con menos de 24 horas de antelación.');
             return;
         }
 
-        setDate(newDate); // Actualiza el estado de la fecha seleccionada
+        setDate(newDate);
         setSelectedDate(newDate);
-        setShowModal(true); // Abre el modal
+        setShowModal(true);
     };
 
     // Asignar una consulta seleccionada
@@ -161,11 +161,11 @@ function MyCalendar() {
             if (profileError) {
                 console.error('Error recargando los Unicoins:', profileError);
             } else {
-                setUnicoins(updatedProfile.unicoins); // Actualizar estado de Unicoins
+                setUnicoins(updatedProfile.unicoins);
             }
 
-            setAssignedDates((prev) => [...prev, formattedDate]); // Actualiza las fechas asignadas
-            setShowModal(false); // Cierra el modal
+            setAssignedDates((prev) => [...prev, formattedDate]);
+            setShowModal(false);
         }
     };
 

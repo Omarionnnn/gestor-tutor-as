@@ -112,7 +112,7 @@ html, body {
     padding: 0;
   }
   
-  /* Hero Section */
+  /* Sección de Inicio */
   .hero-section {
     width: 100vw;
     margin: 0;
@@ -161,7 +161,7 @@ html, body {
     color: white;
   }
   
-  /* Benefits Section */
+  /* Sección de beneficios */
   .benefits-section {
     flex: 1;
     display: flex;

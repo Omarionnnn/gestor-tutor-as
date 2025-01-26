@@ -1,11 +1,11 @@
 /* Contenedor principal del footer */
 .footer-container {
     height: 100px;
-    background-color: var(--color-primary); /* Azul vibrante */
+    background-color: var(--color-primary);
     color: white;
     padding: 20px 10px;
     text-align: center;
-    border-top: 4px solid var(--color-secondary); /* Línea superior amarilla */
+    border-top: 4px solid var(--color-secondary);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -24,14 +24,14 @@
 }
 
 .footer-link {
-    color: var(--color-secondary); /* Amarillo */
+    color: var(--color-secondary);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-    color: #ffaa00; /* Amarillo más intenso */
+    color: #ffaa00;
 }
 
 /* Créditos */

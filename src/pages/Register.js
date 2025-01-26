@@ -25,23 +25,39 @@ function Register() {
         setLoading(true);
 
         const { email, password, fullname } = formData;
-        const { error } = await supabase.auth.signUp({
-            email,
-            password,
-            options: {
-                data: {
-                    fullname, // Guarda el nombre completo en el perfil del usuario
-                },
-            },
-        });
 
-        if (error) {
+        try {
+            // Registro del usuario en Supabase
+            const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
+                email,
+                password,
+            });
+
+            if (signUpError) {
+                throw new Error(signUpError.message);
+            }
+
+            console.log('Usuario registrado:', signUpData);
+
+            // Crear perfil en la tabla `profiles`
+            const { error: profileError } = await supabase
+                .from('profiles')
+                .insert([
+                    { uuid: signUpData.user.id, email, fullname, unicoins: 0 },
+                ]);
+
+            if (profileError) {
+                throw new Error(profileError.message);
+            }
+
+            alert('Registro y creación de perfil exitosos.');
+            navigate('/calendar');
+        } catch (error) {
+            console.error('Error:', error);
             setError(error.message);
-        } else {
-            alert('Registro exitoso. Revisa tu correo para verificar tu cuenta.');
-            navigate('/calendar'); // Redirige a Calendar
+        } finally {
+            setLoading(false);
         }
-        setLoading(false);
     };
 
     return (

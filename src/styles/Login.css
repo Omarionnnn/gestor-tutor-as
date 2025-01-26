@@ -3,8 +3,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 70px); /* Resta la altura del header */
-    background-color: var(--color-background); /* Fondo gris claro */
+    height: calc(100vh - 70px);
+    background-color: var(--color-background);
     padding: 20px;
 }
 
@@ -13,10 +13,10 @@
     background-color: white;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 400px;
-    box-sizing: border-box; /* Asegura que padding no aumente el tamaño */
+    box-sizing: border-box;
     text-align: center;
 }
 
@@ -80,5 +80,5 @@
 }
 
 .register-link:hover {
-    color: #ffaa00; /* Amarillo más intenso */
+    color: #ffaa00;
 }
