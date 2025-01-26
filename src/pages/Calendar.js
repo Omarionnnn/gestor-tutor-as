@@ -37,7 +37,7 @@ function MyCalendar() {
                     .eq('user_id', user.id);
 
                 if (error) {
-                    console.error('Error fetching consultations:', error);
+                    console.error('Error obteniendo consultas:', error);
                 } else {
                     const dates = data.map((consult) => consult.date);
                     setAssignedDates(dates);
@@ -60,7 +60,7 @@ function MyCalendar() {
             const { data, error: unicoinsError } = await supabase
                 .from('profiles')
                 .select('unicoins')
-                .eq('id', user.id)
+                .eq('uuid', user.id)
                 .single();
 
             if (unicoinsError) {
@@ -143,7 +143,7 @@ function MyCalendar() {
         const { error: unicoinsError } = await supabase
             .from('profiles')
             .update({ unicoins: unicoins - consultation.unicoins })
-            .eq('id', user.id);
+            .eq('uuid', user.id);
 
         if (error || unicoinsError) {
             console.error('Error asignando consulta o restando unicoins:', error || unicoinsError);
@@ -155,7 +155,7 @@ function MyCalendar() {
             const { data: updatedProfile, error: profileError } = await supabase
                 .from('profiles')
                 .select('unicoins')
-                .eq('id', user.id)
+                .eq('uuid', user.id)
                 .single();
 
             if (profileError) {

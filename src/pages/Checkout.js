@@ -44,7 +44,7 @@ function Checkout() {
             const { data: profile, error: profileError } = await supabase
                 .from('profiles')
                 .select('fullname, email, unicoins')
-                .eq('id', userId)
+                .eq('uuid', userId)
                 .single();
 
             if (profileError) {
@@ -89,7 +89,7 @@ function Checkout() {
             const { error: updateError } = await supabase
                 .from('profiles')
                 .update({ unicoins: profile.unicoins + totalUnicoins })
-                .eq('id', userId);
+                .eq('uuid', userId);
 
             if (updateError) {
                 throw new Error('Error al actualizar los Unicoins.');

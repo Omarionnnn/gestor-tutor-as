@@ -3,7 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const Stripe = require('stripe');
 
-// Usa tu clave secreta de Stripe aquí
+// Clave secreta de Stripe
 const stripe = Stripe('sk_test_51QRZqOA9NEVKqo7skw8FUXtb9AvagVCmWaCGrzFlr0sZBOgCuWUjFMi9OSMeBsQdCIxaSix0M362ClvUeYVIDLIG00YDTVkeVl');
 
 const app = express();
@@ -12,12 +12,12 @@ app.use(bodyParser.json());
 
 // Ruta para crear un Payment Intent
 app.post('/create-payment-intent', async (req, res) => {
-    const { amount } = req.body; // Recibe el monto en centavos (ejemplo: 1000 = 10.00)
+    const { amount } = req.body;
 
     try {
         const paymentIntent = await stripe.paymentIntents.create({
             amount,
-            currency: 'eur', // Cambia esto si necesitas otra moneda
+            currency: 'eur',
         });
 
         res.send({
